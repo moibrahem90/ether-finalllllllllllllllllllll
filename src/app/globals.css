@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf8f5;
+  --foreground: #1c1917;
+
+  /* Gold accent palette */
+  --gold-light: #f5e6c0;
+  --gold-mid: #d4a84b;
+  --gold-deep: #a07828;
+  --gold-glow: rgba(212, 168, 75, 0.18);
+
+  /* Pastel accents */
+  --lavender: #e8e0f0;
+  --sage: #d8ead4;
+  --blush: #f5dfd8;
+  --cream: #f7f1e8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f0ea;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #d4a84b, #a07828);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a07828;
+}
+
+/* Selection */
+::selection {
+  background: rgba(212, 168, 75, 0.25);
+  color: #1c1917;
+}
+
+/* Gold shimmer animation */
+@keyframes goldShimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+/* Floating */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(0.5deg); }
+  66% { transform: translateY(-6px) rotate(-0.3deg); }
+}
+
+@keyframes floatA {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-28px) scale(1.04); }
+}
+
+@keyframes floatB {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(22px) scale(0.97); }
+}
+
+@keyframes floatC {
+  0%, 100% { transform: translateY(0px) scale(1) rotate(0deg); }
+  50% { transform: translateY(-18px) scale(1.02) rotate(2deg); }
+}
+
+/* Glow pulse */
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+/* Fade in up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Gradient text utility */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #d4a84b 0%, #f5e6c0 50%, #a07828 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 4s linear infinite;
+}
+
+/* Gold button */
+.btn-gold {
+  background: linear-gradient(135deg, #d4a84b, #a07828);
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(160, 120, 40, 0.3);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(160, 120, 40, 0.45);
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Premium card hover */
+.product-card-hover {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.product-card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(212, 168, 75, 0.15);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
+}

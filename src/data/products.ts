@@ -1,0 +1,50 @@
+export const products = [
+  {
+    id: "1",
+    name: "Lavender Dreams Soap",
+    price: 18,
+    image: "/frames/Transition_assembled_product_exp__202604302311__1__001.png",
+    description: "A calming blend of organic lavender and sweet vanilla. Perfect for unwinding after a long day. Hand-poured with shea butter and essential oils.",
+    scent: "Lavender & Vanilla",
+  },
+  {
+    id: "2",
+    name: "Eucalyptus Mint Candle",
+    price: 32,
+    image: "/frames/Transition_assembled_product_exp__202604302311__1__015.png",
+    description: "Clear your mind and space with this refreshing eucalyptus and peppermint soy candle. Burns clean for 50+ hours.",
+    scent: "Eucalyptus & Peppermint",
+  },
+  {
+    id: "3",
+    name: "Rosewater Clay Soap",
+    price: 20,
+    image: "/frames/Transition_assembled_product_exp__202604302311__1__030.png",
+    description: "Infused with French pink clay and rosewater, this facial soap gently purifies while maintaining your skin's natural moisture barrier.",
+    scent: "Rose & Geranium",
+  },
+  {
+    id: "4",
+    name: "Citrus Grove Candle",
+    price: 30,
+    image: "/frames/Transition_assembled_product_exp__202604302311__1__045.png",
+    description: "Uplifting notes of sweet orange, grapefruit, and a hint of basil. Brings the warmth of a California summer to your home.",
+    scent: "Sweet Orange & Basil",
+  },
+  {
+    id: "5",
+    name: "Oatmeal & Honey Bar",
+    price: 16,
+    image: "/frames/Transition_assembled_product_exp__202604302311__1__060.png",
+    description: "Our most gentle formula, made with colloidal oatmeal and local organic honey. Unscented and perfect for sensitive skin.",
+    scent: "Unscented / Natural Honey",
+  },
+  {
+    id: "6",
+    name: "Cedar & Pine Candle",
+    price: 34,
+    image: "/frames/Transition_assembled_product_exp__202604302311__1__064.png",
+    description: "Bring the forest indoors. A deep, grounding aroma of cedarwood, pine needles, and a touch of smoky vetiver.",
+    scent: "Cedarwood & Pine",
+  }
+];

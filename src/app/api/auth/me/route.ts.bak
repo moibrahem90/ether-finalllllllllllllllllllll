@@ -1,0 +1,21 @@
+import { NextResponse } from 'next/server';
+import { cookies } from 'next/headers';
+import * as jose from 'jose';
+
+export async function GET() {
+  const cookieStore = await cookies();
+  const token = cookieStore.get('token')?.value;
+
+  if (!token) {
+    return NextResponse.json({ user: null }, { status: 401 });
+  }
+
+  try {
+    const secret = new TextEncoder().encode(process.env.JWT_SECRET || 'super-secret-key-change-me');
+    const { payload } = await jose.jwtVerify(token, secret);
+    
+    return NextResponse.json({ user: payload }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ user: null }, { status: 401 });
+  }
+}

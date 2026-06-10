@@ -1,0 +1,29 @@
+{
+  "googleReviewUrl": "",
+  "reviews": [
+    {
+      "id": "00387ee1-0d9d-44db-8935-5dd9b29bdd36",
+      "imageUrl": "/reviews/78a6cdaf-a903-4748-a003-1bb84f8cba47.jpeg",
+      "isLocal": true,
+      "createdAt": "2026-06-08T19:57:05.260Z"
+    },
+    {
+      "id": "e1596081-0734-4adc-95a8-ab6057feecaf",
+      "imageUrl": "/reviews/90867afc-6b16-438e-83d1-b2ef0a42aa9a.jpg",
+      "isLocal": true,
+      "createdAt": "2026-06-08T23:06:29.920Z"
+    },
+    {
+      "id": "66ecd749-1eaa-4113-8853-16f726ddb1aa",
+      "imageUrl": "/reviews/47d4715b-7a9e-4c9b-94c9-4186e5689283.jpg",
+      "isLocal": true,
+      "createdAt": "2026-06-08T23:06:52.215Z"
+    },
+    {
+      "id": "d34cb809-5dc8-42ab-b0f5-c59f3f8cefa0",
+      "imageUrl": "/reviews/89d638ec-8c8b-4676-95d4-8d9228a77dc3.jpg",
+      "isLocal": true,
+      "createdAt": "2026-06-08T23:07:48.852Z"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "videos": [
+    {
+      "id": "07526ed9-0dea-4939-90c4-4b824b243996",
+      "title": "Test Video",
+      "url": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "description": "",
+      "thumbnail": "",
+      "createdAt": "2026-05-23T15:59:35.207Z"
+    },
+    {
+      "id": "c7fc835b-6c0a-428b-95b7-a39d689519ac",
+      "title": "video",
+      "url": "/videos/902646d9-4808-4ac6-be7b-583f778ceb4a.mov",
+      "description": "",
+      "thumbnail": "",
+      "createdAt": "2026-05-23T16:18:31.879Z"
+    },
+    {
+      "id": "a7cf43ee-72f0-4822-a018-38aa739f2b76",
+      "title": "v3",
+      "url": "/videos/f842074d-b6f5-43b3-bcca-24e485d8dd2c.mp4",
+      "description": "",
+      "thumbnail": "",
+      "createdAt": "2026-05-23T16:26:00.615Z"
+    }
+  ]
+}
