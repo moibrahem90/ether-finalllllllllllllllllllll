@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import ConditionalShell from "@/components/ConditionalShell";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
@@ -30,12 +29,7 @@ export default function RootLayout({
       >
         <QueryProvider>
           <CartProvider>
-            <Navbar />
-            <main className="flex-grow">
-              {children}
-            </main>
-            
-            <Footer />
+            <ConditionalShell>{children}</ConditionalShell>
           </CartProvider>
         </QueryProvider>
       </body>

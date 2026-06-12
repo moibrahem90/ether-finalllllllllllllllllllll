@@ -1,9 +1,13 @@
 "use client";
 
-import { User } from 'lucide-react';
+import { User, Menu } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-export default function Navbar() {
+interface NavbarProps {
+  onMenuClick: () => void;
+}
+
+export default function Navbar({ onMenuClick }: NavbarProps) {
   const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
@@ -14,7 +18,15 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="h-20 bg-white/80 backdrop-blur-xl border-b border-stone-100 fixed top-0 right-0 left-0 lg:left-72 z-40 px-6 sm:px-10 flex items-center justify-end">
+    <header className="h-20 bg-white/80 backdrop-blur-xl border-b border-stone-100 fixed top-0 right-0 left-0 lg:left-72 z-40 px-6 sm:px-10 flex items-center justify-between lg:justify-end">
+      <button 
+        onClick={onMenuClick}
+        className="lg:hidden p-2 -ml-2 rounded-xl text-stone-500 hover:bg-[#f5e6c0]/40 hover:text-[#a07828] transition-colors"
+        aria-label="Open navigation menu"
+      >
+        <Menu size={22} />
+      </button>
+
       <div className="flex items-center gap-3">
         <div className="text-right hidden sm:block">
           <p className="text-sm font-semibold text-stone-800">{user?.name || 'Admin User'}</p>

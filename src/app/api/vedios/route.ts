@@ -28,6 +28,7 @@ function writeVideos(videos: Video[]): void {
 
 export async function GET() {
   const videos = readVideos();
+  videos.sort((a, b) => new Date(b.createdAt || 0).getTime() - new Date(a.createdAt || 0).getTime());
   return NextResponse.json({ videos });
 }
 

@@ -183,9 +183,9 @@ export default function VideosPage() {
 
   // ── Filter ─────────────────────────────────────────────────────────────────
 
-  const filteredVideos = videos?.filter((v) =>
-    v.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredVideos = videos
+    ?.filter((v) => v.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 
   // ── Render ─────────────────────────────────────────────────────────────────
 
